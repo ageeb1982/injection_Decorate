@@ -15,9 +15,13 @@ Install-Package Scrutor
 dotnet add package Scrutor
 ```
 
+
+في ملف الProgram.cs أو Startup.cs
+```
 //للإضافة السابقة
 builder.Services.AddSingleton<ITest, Test1>();
 //حذف التبعية المحقونه سابقاً
 builder.Services.Decorate<ITest, Test1>();
 // إضافة تبعية محقونه الجديدة
 builder.Services.AddScoped<ITest, Test2>();
+```
